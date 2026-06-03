@@ -68,16 +68,20 @@ public class NPCController : MonoBehaviour
         switch (currentGoal)
         {
             case GoalType.Eat:
+                destination = market;
                 actions.Eat();
                 break;
 
             case GoalType.Work:
+                destination = workplace;
                 actions.Work();
                 break;
 
             case GoalType.Sleep:
+                destination = house;
                 actions.Sleep();
                 break;
         }
     }
+    
 }
