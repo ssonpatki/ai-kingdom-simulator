@@ -7,6 +7,7 @@ public class NPCController : MonoBehaviour
     public Transform house;
     public Transform market;
     public Transform workplace;
+    private Transform destination;
 
     public float moveSpeed = 2f;
     private NPCStats stats;
@@ -32,6 +33,17 @@ public class NPCController : MonoBehaviour
             ExecuteGoal();
 
             decisionTimer = 0f;
+        }
+
+        // enables NPC to walk towards target
+        if (destination != null)
+        {
+            transform.position = 
+                Vector3.MoveTowards(
+                    transform.position,
+                    destination.position,
+                    moveSpeed * Time.deltaTime
+                );
         }
     }
 
