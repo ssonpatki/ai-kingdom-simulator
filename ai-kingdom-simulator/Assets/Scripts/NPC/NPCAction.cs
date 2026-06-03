@@ -17,7 +17,9 @@ public class NPCAction : MonoBehaviour
             stats.money -= 5;
             stats.hunger -= 50;
 
-            Debug.Log($"{name} bought food.");
+            WorldManager.Instance.AddEvent(
+                $"{name} bought food."
+            );
         }
     }
 
@@ -35,6 +37,8 @@ public class NPCAction : MonoBehaviour
     {
         stats.energy += 40;
 
-        Debug.Log($"{name} slept.");
+        WorldManager.Instance.AddEvent(
+            $"{name} slept."
+        );
     }
 }
