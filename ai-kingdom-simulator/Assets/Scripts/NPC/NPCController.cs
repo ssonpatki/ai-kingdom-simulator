@@ -45,6 +45,11 @@ public class NPCController : MonoBehaviour
                     moveSpeed * Time.deltaTime
                 );
         }
+
+        if (AtDestination())
+        {
+            CompleteGoal();
+        }
     }
 
     private void DecideGoal()
@@ -69,19 +74,50 @@ public class NPCController : MonoBehaviour
         {
             case GoalType.Eat:
                 destination = market;
-                actions.Eat();
+                //actions.Eat();
                 break;
 
             case GoalType.Work:
                 destination = workplace;
-                actions.Work();
+                //actions.Work();
                 break;
 
             case GoalType.Sleep:
                 destination = house;
-                actions.Sleep();
+                //actions.Sleep();
                 break;
         }
     }
-    
+
+    private bool AtDestination()
+    {
+        if (destination == null)
+        {
+            return false;
+        }
+
+        return Vector3.Distance(
+            transform.position,
+            destination.position
+        ) < 0.5f;
+    }
+
+    private void CompleteGoal()
+    {
+        switch (currentGoal)
+        {
+            case GoalType.Eat:
+                actions.Eat();
+                break;
+
+            case GoalType.Work:
+                actions.Work();
+                break;
+
+            case GoalType.Sleep:
+                actions.Sleep();
+                break;
+        }
+        destination = null;
+    }
 }
