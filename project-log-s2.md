@@ -27,3 +27,12 @@ Low Money
 Low Energy
 → Go Home
 → Sleep
+
+# Stage Two Code Structure
+
+# Stage Two Unity Structure
+
+For each NPC:
+* NPC_1
+    * [new empty child game object] DebugText
+        * in DebugText, add Component (TextMeshPro - Text)
