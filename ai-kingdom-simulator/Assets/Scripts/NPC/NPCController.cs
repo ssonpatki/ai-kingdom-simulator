@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
+    public Transform house;
+    public Transform market;
+    public Transform workplace;
+
+    public float moveSpeed = 2f;
     private NPCStats stats;
     private NPCAction actions;
 
