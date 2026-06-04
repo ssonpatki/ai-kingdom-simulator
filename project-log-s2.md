@@ -29,10 +29,31 @@ Low Energy
 → Sleep
 
 # Stage Two Code Structure
+Assets/
+    Scripts/
+        NPC/
+            GoalType.cs/
+            NPCAction.cs/
+            NPCController.cs/
+            NPCStats.cs/
+            NPCDebugDisplay.cs/
+        UI/
+        World/
+            LocationMarkers.cs/
+            WorldManager.cs/
+
+## Major File Updates
+
+**NPCController.cs**
+
+
+**NPCDebugDisplay.cs**
+
 
 # Stage Two Unity Structure
 
 For each NPC:
 * NPC_1
     * [new empty child game object] DebugText
-        * in DebugText, add Component (TextMeshPro - Text)
+        * in DebugText, add Component (TextMeshPro - Text); use the fields in this component to change the text font/color/characteristics/etc.
+        * in DebugText, add another Component w/ script NPCDebugDisplay.cs (drag NPC_1 game object into the stats and action fields in the compoent)

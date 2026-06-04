@@ -20996,7 +20996,7 @@
         "Assets/Scripts/NPC/NPCController.cs",
         "Assets/Scripts/NPC/NPCDebugDisplay.cs",
         "Assets/Scripts/NPC/NPCStats.cs",
-        "Assets/Scripts/World/locationMarkers.cs",
+        "Assets/Scripts/World/LocationMarkers.cs",
         "Assets/Scripts/World/WorldManager.cs",
         "/Applications/Unity/Hub/Editor/2022.3.32f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll",
         "/Applications/Unity/Hub/Editor/2022.3.32f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll",

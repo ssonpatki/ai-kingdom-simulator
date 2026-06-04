@@ -356,7 +356,7 @@
 "Assets/Scripts/NPC/NPCController.cs"
 "Assets/Scripts/NPC/NPCDebugDisplay.cs"
 "Assets/Scripts/NPC/NPCStats.cs"
-"Assets/Scripts/World/locationMarkers.cs"
+"Assets/Scripts/World/LocationMarkers.cs"
 "Assets/Scripts/World/WorldManager.cs"
 -langversion:9.0
 /deterministic
